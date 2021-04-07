@@ -15,7 +15,7 @@ If you do not have Python installed yet, it is highly recommended that you insta
 
 ### Code
 
-The code is in the `housing-price-prediction.ipynb` file, along with attached the data used in the projects also the .joblib model and the requirements.txt for easy installation of prerequisites
+The code is in the `housing-price-prediction.ipynb` file, along with attached the data used in the projects also the `my_model.pkl` (the outcome of the project) and the `requirements.txt` for easy installation of prerequisites
 
 ### Run
 
