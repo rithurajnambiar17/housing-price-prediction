@@ -1,0 +1,36 @@
+<html>
+   <body>
+   <center>
+      <form action = "{{url_for('result')}}" method = "POST">
+         <p>A measure of how far west a house is; a higher value is farther west</p>
+         <p><label for="lon"><b>Longitude</b></label> <br><input type = "number" name = "lon" step="any" value = -118.3></p>
+
+         <p>A measure of how far north a house is; a higher value is farther north</p>
+         <p><label for="lat"><b>Latitude</b></label> <br><input type = "number" name = "lat" step="any" value = 34.06></p>
+
+         <p>Median age of a house within a block; a lower number is a newer building</p>
+         <p><label for="age"><b>Housing Age</b></label> <br><input type = "number" name = "age" step="any"></p>
+
+         <p>Total number of rooms within a block</p>
+         <p><label for="rooms"><b>Total Rooms</b></label> <br><input type = "number" name = "rooms" step="any"></p>
+
+         <p>Total number of bedrooms within a block</p>
+         <p><label for="bed"><b>Total Bedrooms</b></label> <br><input type ="number" name = "bed" step="any"></p>
+
+         <p>Total number of people residing within a block</p>
+         <p><label for="pop"><b>Population</b></label> <br><input type ="number" name = "pop" step="any"></p>
+
+         <p>Total number of households, a group of people residing within a home unit, for a block</p>
+         <p><label for="holds"><b>Households</b></label><br> <input type ="number" name = "holds" step="any"></p>
+
+         <p>Median income for households within a block of houses (measured in tens of thousands of US Dollars)</p>
+         <p><label for="inc"><b>Income</b></label> <br><input type ="number" name = "inc" step="any"></p>
+
+         <p>Location of the house w.r.t ocean/sea (0,1,2,3,4) </p>
+         <p><label for="oceanp"><b>Ocean Proximity</b></label><br> <input type ="number" name = "oceanp"></p>
+
+         <p><input type = "submit" value = "Predict" ></p>
+      </form>
+   </center>
+   </body>
+</html>
