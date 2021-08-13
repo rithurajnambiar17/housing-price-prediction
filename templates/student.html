@@ -1,36 +1,104 @@
 <html>
+   <head>
+
+      <link href='../static//css/bootstrap.min.css' rel="stylesheet">
+      <link href='../static/css/style.css' rel="stylesheet">
+      <link href={{ url_for('static', filename='css/bootstrap.min.css') }} rel="stylesheet">
+      <link href={{ url_for('static', filename='css/stylesheets/style.css') }} rel="stylesheet">
+      
+
+      
+   </head>
    <body>
-   <center>
-      <form action = "{{url_for('result')}}" method = "POST">
-         <p>A measure of how far west a house is; a higher value is farther west</p>
-         <p><label for="lon"><b>Longitude</b></label> <br><input type = "number" name = "lon" step="any" value = -118.3></p>
+      <header style="background-color: black;">
+            <div class="container d-flex align-items-center justify-content-lg-between">
+               <center>
+                  <a><h1 class="logo me-auto me-lg-0">HOUSING PRICE PREDICTION<span>.</span></a></h1>
+               </center>
+            </div>
+      </header>
+      <br><br>
+      <div class="container">
+         <form action = "{{url_for('result')}}" method = "POST">
 
-         <p>A measure of how far north a house is; a higher value is farther north</p>
-         <p><label for="lat"><b>Latitude</b></label> <br><input type = "number" name = "lat" step="any" value = 34.06></p>
+            <div class="row">
+               <div class="col-md-6 form-group">
+                  <label>A measure of how far west a house is; a higher value is farther west e.g: -118.3</label>
+                  <input type="number" name="lon" placeholder="Longitude" class="form-control" step="any">
+               </div>
 
-         <p>Median age of a house within a block; a lower number is a newer building</p>
-         <p><label for="age"><b>Housing Age</b></label> <br><input type = "number" name = "age" step="any"></p>
+               <div class="col-md-6 form-group">
+                  <label>A measure of how far north a house is; a higher value is farther north e.g: 34.06</label>
+                  <input type="number" name="lat" placeholder="Latitude" class="form-control" step="any">
+               </div>
+            </div>
 
-         <p>Total number of rooms within a block</p>
-         <p><label for="rooms"><b>Total Rooms</b></label> <br><input type = "number" name = "rooms" step="any"></p>
+            <div class="row">
+               <div class="col-md-6 form-group">
+                  <label>Median age of a house within a block; a lower number is a newer building</label>
+                  <input type="number" name="age" placeholder="Median Age" class="form-control" step="any">
+               </div>
 
-         <p>Total number of bedrooms within a block</p>
-         <p><label for="bed"><b>Total Bedrooms</b></label> <br><input type ="number" name = "bed" step="any"></p>
+               <div class="col-md-6 form-group">
+               <label>Total number of rooms within a block</label>
+               <input type="number" name="rooms" placeholder="Total Rooms" class="form-control" step="any">
+            </div>
+            </div>
 
-         <p>Total number of people residing within a block</p>
-         <p><label for="pop"><b>Population</b></label> <br><input type ="number" name = "pop" step="any"></p>
+            <div class="row">
+               <div class="col-md-6 form-group">
+                  <label>Total number of bedrooms within a block</label>
+                  <input type="number" name="bed" placeholder="Total Bedrooms" class="form-control" step="any">
+               </div>
 
-         <p>Total number of households, a group of people residing within a home unit, for a block</p>
-         <p><label for="holds"><b>Households</b></label><br> <input type ="number" name = "holds" step="any"></p>
+               <div class="col-md-6 form-group">
+               <label>Total number of people residing within a block</label>
+               <input type="number" name="pop" placeholder="Population" class="form-control" step="any">
+            </div>
+            </div>
 
-         <p>Median income for households within a block of houses (measured in tens of thousands of US Dollars)</p>
-         <p><label for="inc"><b>Income</b></label> <br><input type ="number" name = "inc" step="any"></p>
+            <div class="row">
+               <div class="col-md-6 form-group">
+                  <label>Total number of households, a group of people residing within a home unit, for a block</label>
+                  <input type="number" name="holds" placeholder="Total Households" class="form-control" step="any">
+               </div>
 
-         <p>Location of the house w.r.t ocean/sea (0,1,2,3,4) </p>
-         <p><label for="oceanp"><b>Ocean Proximity</b></label><br> <input type ="number" name = "oceanp"></p>
+               <div class="col-md-6 form-group">
+               <label>Median income for households within a block of houses (measured in tens of thousands of US Dollars)</label>
+               <input type="number" name="inc" placeholder="Income" class="form-control" step="any">
+            </div>
+            </div>
 
-         <p><input type = "submit" value = "Predict" ></p>
-      </form>
-   </center>
+            <div class ="row">
+               <div class="col-md-6 form-group">
+                  <label for="cars">Location of the house w.r.t ocean/sea</label><br>
+                  <div class="row">
+                     <div class="col">
+                        <input type="radio" name="oceanp" value="0"> <label for="oceanp">0</label><br>
+                        <input type="radio" name="oceanp" value="1"> <label for="oceanp">1</label><br>
+                     </div>
+                     <div class="col">
+                        <input type="radio" name="oceanp" value="2"> <label for="oceanp">2</label><br>
+                        <input type="radio" name="oceanp" value="3"> <label for="oceanp">3</label><br>
+                     </div>
+                     <div class="col">
+                        <input type="radio" name="oceanp" value="4"> <label for="oceanp">4</label><br>
+                     </div>
+                  </div>
+                   
+
+                  <!-- <input type="radio" id="html" name="fav_language" value="HTML">
+                  <label for="html">HTML</label><br>
+                  <input type="radio" id="css" name="fav_language" value="CSS">
+                  <label for="css">CSS</label><br>
+                  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                  <label for="javascript">JavaScript</label> -->
+               </div>
+            </div><br>
+            <center>
+               <button type = "submit" value = "Predict" class="btn-predict">Predict</button>
+            </center>
+         </form>
+      </div>
    </body>
 </html>

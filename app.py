@@ -3,7 +3,9 @@ import joblib
 import numpy as np
 app = Flask(__name__)
 
-model = joblib.load('D:\Projects!\housing-price-prediction\my_model.pkl')
+model = joblib.load('./my_model.pkl')
+
+app.static_folder = 'static'
 
 @app.route('/')
 def student():
