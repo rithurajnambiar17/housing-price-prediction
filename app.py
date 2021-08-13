@@ -9,7 +9,7 @@ app.static_folder = 'static'
 
 @app.route('/')
 def student():
-   return render_template('student.html')
+   return render_template('data.html')
 
 @app.route('/result',methods = ['POST', 'GET'])
 def result():
